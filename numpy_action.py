@@ -12,3 +12,12 @@ print(np.array([[1],[1],[1]]).shape)
 # 定义行向量的正确形式如下，一行三列
 print(np.array([[1,1,1]]).shape)
 
+"""
+numpy 元素级别的运算
+对应位置的运算
+区别于矩阵运算
+"""
+a = np.ones(3)
+b = np.ones(3)
+print(a*b)
+print(np.dot(a, b.T))
