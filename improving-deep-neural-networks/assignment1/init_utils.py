@@ -214,7 +214,7 @@ def plot_decision_boundary(model, X, y):
     plt.contourf(xx, yy, Z, cmap=plt.cm.Spectral)
     plt.ylabel('x2')
     plt.xlabel('x1')
-    plt.scatter(X[0, :], X[1, :], c=y, cmap=plt.cm.Spectral)
+    plt.scatter(X[0, :], X[1, :], c=np.squeeze(y), cmap=plt.cm.Spectral)
     plt.show()
     
 def predict_dec(parameters, X):
@@ -228,10 +228,11 @@ def predict_dec(parameters, X):
     Returns
     predictions -- vector of predictions of our model (red: 0 / blue: 1)
     """
-    
     # Predict using forward propagation and a classification threshold of 0.5
     a3, cache = forward_propagation(X, parameters)
     predictions = (a3>0.5)
+    # 得加上这句话，使得 shape 变成(X,) 的形式
+    # predictions = np.squeeze(predictions)
     return predictions
 
 def load_dataset():
@@ -240,7 +241,8 @@ def load_dataset():
     np.random.seed(2)
     test_X, test_Y = sklearn.datasets.make_circles(n_samples=100, noise=.05)
     # Visualize the data
-    plt.scatter(train_X[:, 0], train_X[:, 1], c=train_Y, s=40, cmap=plt.cm.Spectral);
+    plt.scatter(train_X[:, 0], train_X[:, 1], c=train_Y, s=40, cmap=plt.cm.Spectral)
+    # plt.scatter(test_X[:, 0], test_X[:, 1], c=test_Y, s=40, cmap=plt.cm.Spectral)
     train_X = train_X.T
     train_Y = train_Y.reshape((1, train_Y.shape[0]))
     test_X = test_X.T
