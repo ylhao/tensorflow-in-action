@@ -15,7 +15,6 @@ x = tf.placeholder(tf.float32, [None, 784])
 y_ = tf.placeholder(tf.float32, [None, 10])
 keep_prob = tf.placeholder(tf.float32)
 
-#W1 = tf.Variable(tf.zeros([784, 300]))
 W1 = tf.Variable(tf.truncated_normal([784, 300], stddev=0.1))
 b1 = tf.Variable(tf.zeros([300]))
 W2 = tf.Variable(tf.zeros([300, 10]))
