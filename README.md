@@ -38,4 +38,7 @@ deactivate
 ## 脚本介绍
 
 - gpu-test.py: 测试是否有GPU
+- cnn_base.py: cnn
+- nn_softmax_base.py: nn
+
 
