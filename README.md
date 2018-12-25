@@ -40,5 +40,5 @@ deactivate
 - gpu-test.py: 测试是否有GPU
 - cnn_base.py: cnn
 - nn_softmax_base.py: nn
-
+- save_restore_model.py: 保存和加载模型
 
