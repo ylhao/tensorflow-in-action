@@ -1,7 +1,9 @@
 # tensorflow-in-action
 
-#### 配置环境
-###### 设置 pip 源
+## 配置环境
+
+### 设置 pip 源
+
 ```
 // 打开相关的配置文件
 vim ~/.pip/pip.conf
@@ -14,7 +16,8 @@ vim ~/.pip/pip.conf
 // 保存退出
 ```
 
-###### 创建虚拟运行环境
+### 创建虚拟运行环境
+
 ```
 // 如果没安装 virtualenv 的话，先安装 virtualenv
 sudo pip install virtualenv
@@ -31,4 +34,8 @@ pip install numpy pandas matplotlib tensorlfow==1.0.0
 // 退出虚拟环境
 deactivate
 ```
+
+## 脚本介绍
+
+- gpu-test.py: 测试是否有GPU
 
